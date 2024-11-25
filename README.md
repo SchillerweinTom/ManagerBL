@@ -21,5 +21,7 @@ A web application to manage and track football teams, matches, and performance d
 - **Chart.js**: JavaScript library for rendering interactive charts.
 - **HTML/CSS**: For the structure and styling of the web pages.
 
+## Discaimer
+
 This project is created as an example for educational purposes. I do not own the copyrights to the teams, players, or any related content used in this application. 
 All trademarks and logos belong to their respective owners.
