@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bundesliga Manager</title>
+  <link rel="stylesheet" href="/public/style/style.css">
+  <link rel="stylesheet" href="/public/style/players.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    {{> header}}
+
+    <main class="container main-content">
+      <div class="players-page">
+        <h1 class="page-title">Bundesliga Players</h1>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Team</th>
+                <th>Age</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each players}}
+                <tr>
+                  <td><img src="public/{{this.image}}" alt="{{this.name}}" class="player-image"></td>
+                  <td>{{this.name}}</td>
+                  <td><span class="badge badge-gray">{{this.position}}</span></td>
+                  <td><span class="badge" style="background-color: {{this.teamColor}};">{{this.team}}</span></td>
+                  <td>{{this.age}}</td>
+                </tr>
+              {{/each}}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+
+    {{> footer}}
+  </div>
+</body>
+</html>

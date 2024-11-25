@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bundesliga Manager</title>
+    <link rel="stylesheet" href="/public/style/style.css">
+    <link rel="stylesheet" href="/public/style/teams.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        {{> header}}
+
+        <main class="container main-content">
+            <div class="teams-page">
+                <h1 class="page-title page-al">Bundesliga Teams
+                    {{#if user}}
+                    <a href="/addTeam" class="btn-edit">+</a>
+                    {{/if}}
+                </h1>
+                <div class="teams-grid">
+
+                    {{#each teams}}
+                    <div class="card">
+                        <div class="card-header" style="background-color: {{this.color}};"></div>
+                        <div class="card-body">
+                            <div class="card-logo">
+                                {{#if this.logo}}
+                                <img src="public/{{this.logo}}" alt="{{this.name}} logo">
+                                {{else}}
+                                <img src="public/images/badge.png" alt="Default logo">
+                                {{/if}}
+                            </div>
+                            <div class="card-title">{{this.name}}</div>
+                            <div class="card-info">
+                                <p><strong>Founded:</strong> {{this.founded}}</p>
+                                <p><strong>Stadium:</strong> {{this.stadium}}</p>
+                            </div>
+                            <div class="badges">
+                                <span class="badge">{{this.titles}}</span>
+                            </div>
+                            {{#if ../user}}
+                            <a href="/editTeam/{{this.id}}" class="btn-edit">Edit</a>
+                            <form action="/deleteTeam/{{this.id}}" method="POST" style="display: inline;"
+                                onsubmit="return confirm('Are you sure you want to delete this team?');">
+                                <button type="submit" class="btn-del">Delete</button>
+                            </form>
+                            {{/if}}
+                        </div>
+                    </div>
+                    {{/each}}
+
+                </div>
+            </div>
+        </main>
+
+        {{> footer}}
+    </div>
+</body>
+
+</html>

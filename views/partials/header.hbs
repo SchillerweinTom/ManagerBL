@@ -1,0 +1,22 @@
+<header class="header">
+    <div class="container">
+        <a href="/" class="logo">
+            <img src="/public/images/logo.png" alt="Bundesliga Logo" class="logo-img">
+            <span class="logo-text">Bundesliga Manager</span>
+        </a>
+        <nav class="nav-custom">
+            <ul class="nav-list">
+                <li><a href="/teams" class="nav-link">Teams</a></li>
+                <li><a href="/players" class="nav-link">Players</a></li>
+                <li><a href="/statistics" class="nav-link">Statistics</a></li>
+            </ul>
+            <div class="user-actions">
+                {{#if user}}
+                <form action="/logout" method="POST" class="logout-form">
+                    <button type="submit" class="btn-head btn-logout">Logout</button>
+                </form>
+                {{/if}}
+            </div>
+        </nav>
+    </div>
+</header>

@@ -1,0 +1,335 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Header Styles */
+.header {
+    background: linear-gradient(to right, #d20515, #ff4b4b);
+    color: white;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.logo-img {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Navigation */
+.nav-list {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #ffcccc;
+}
+
+.nav-custom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.btn-head {
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-logout {
+    background-color: white;
+    color: red;
+    font-weight: 600;
+}
+
+.btn-logout:hover {
+    background-color: #f5f5f5;
+    color: #d20515;
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    padding: 40px 0;
+    text-align: center;
+}
+
+/* Footer Styles */
+.footer {
+    background: linear-gradient(to right, #333, #444);
+    color: white;
+    padding: 5px 0;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.social-link {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.social-link:hover {
+    color: #ff6666;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.bl-btn {
+    text-decoration: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(to left, #d20515, #ff4b4b);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bl-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.bl-btn:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+
+.login-box {
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 250px;
+    width: 100%;
+}
+
+/* Heading */
+.login-box h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form group */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* Labels */
+.form-group label {
+    display: block;
+    font-weight: bold;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+/* Input fields */
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Input focus effect */
+.form-group input:focus {
+    border-color: #DC052D;
+    outline: none;
+}
+
+/* Bundesliga-inspired button */
+.btn.btn-primary {
+    text-decoration: none;
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(90deg, #DC052D 0%, #A60F1C 100%);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Button hover effect */
+.btn.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Button active effect */
+.btn.btn-primary:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.error-msg{
+    margin-top: 10px;
+    color: red;
+    
+}
+
+.admin-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.admin-card h1 {
+    font-size: 2rem;
+    color: #d20515;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.admin-card p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.admin-card p strong {
+    color: #ff4b4b;
+}
+
+.btn-edit {
+    margin: 10px 0;
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: #007bff;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid #0056b3;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.btn-del {
+    margin: 10px 0;
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: #dc3545;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid #b02a37;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.btn-edit:hover {
+    background-color: #0056b3;
+    border-color: #003f7f;
+    box-shadow: 0 4px 8px rgba(0, 91, 191, 0.3);
+}
+
+.btn-del:hover {
+    background-color: #b02a37;
+    border-color: #7e1e29;
+    box-shadow: 0 4px 8px rgba(208, 66, 81, 0.3);
+}
+
+.page-al{
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 15px;
+}

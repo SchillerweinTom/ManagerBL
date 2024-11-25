@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bundesliga Manager</title>
+  <link rel="stylesheet" href="/public/style/style.css">
+  <link rel="stylesheet" href="/public/style/edit.css">
+</head>
+<body>
+    <div class="wrapper">
+        {{> header}} 
+
+        <main class="container main-content">
+            <div class="edit-team-page">
+                <h1>Add Team</h1>
+                <form action="/addTeam" enctype="multipart/form-data" method="POST">
+                    <div class="form-group">
+                        <label for="name">Team Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="founded">Founded</label>
+                        <input type="number" id="founded" name="founded"  required>
+                    </div>
+                    <div class="form-group">
+                        <label for="stadium">Stadium</label>
+                        <input type="text" id="stadium" name="stadium"  required>
+                    </div>
+                    <div class="form-group">
+                        <label for="titles">Titles</label>
+                        <input type="text" id="titles" name="titles" placeholder="e.g., '5 Titles'" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="color">Team Color</label>
+                        <input type="color" id="color" name="color" value="#000000" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="logo">Team Logo</label>
+                        <input type="file" id="logo" name="logo" accept="image/*">
+                    </div>
+                    <button type="submit" class="btn btn-save save">Add Team</button>
+                </form>
+            </div>
+        </main>
+
+        {{> footer}}
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bundesliga Manager</title>
+    <link rel="stylesheet" href="/public/style/style.css">
+    <link rel="stylesheet" href="/public/style/stats.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        {{> header}}
+
+        <main class="container main-content">
+            <div class="statistics-page">
+                <h1 class="page-title">Bundesliga Statistics</h1>
+
+                <div class="grid">
+                    <div class="stat-card" style="background: linear-gradient(to bottom right, #ef4343, #dd2828);">
+                        <div class="card-header">Total Goals</div>
+                        <div class="card-content">
+                            {{stats.totGoals}}
+                        </div>
+                    </div>
+
+                    <div class="stat-card" style="background: linear-gradient(to bottom right, #3a81f5, #2664eb);">
+                        <div class="card-header">Avg. Goals per Match</div>
+                        <div class="card-content">
+                            {{stats.avgGoals}}
+                        </div>
+                    </div>
+
+                    <div class="stat-card" style="background: linear-gradient(to bottom right, #21c45d, #16a44b);">
+                        <div class="card-header">Clean Sheets</div>
+                        <div class="card-content">
+                            {{stats.clean}}
+                        </div>
+                    </div>
+
+                    <div class="stat-card" style="background: linear-gradient(to bottom right, #e9b208, #e29d08);">
+                        <div class="card-header">Red Cards</div>
+                        <div class="card-content">
+                            {{stats.redCards}}
+                        </div>
+                    </div>
+                </div>
+
+                <div id="teams" style="display: none;">{{teamPerformance}}</div>
+
+                <div class="charts-container">
+                    <div class="chart-card">
+                        <div class="card-header">Top Scorers</div>
+                        <div class="card-content">
+                            <canvas id="topScorersChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="chart-card">
+                        <div class="card-header">Team Performance</div>
+                        <div class="card-content">
+                            <canvas id="teamPerformanceChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart-card" style="margin-top: 30px;">
+                    <div class="card-header">Goals Scored Over Time</div>
+                    <div class="card-content">
+                        <canvas id="goalsScoredChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        {{> footer}}
+    </div>
+
+
+
+    <script src="public/scripts/chart.js"></script>
+</body>
+
+</html>

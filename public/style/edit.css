@@ -1,0 +1,64 @@
+.edit-team-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.edit-team-page h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: black;
+    text-align: center;
+}
+
+/* Form Styling */
+form {
+    gap: 20px;
+}
+label {
+    font-size: 1rem;
+    color: #333;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="color"] {
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="color"]:focus {
+    border-color: #d20515;
+}
+
+.save{
+    padding: 12px 20px;
+    background-color: #d20515;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: center;
+}
+
+.save:hover {
+    background-color: #ff4b4b;
+}
+
+input[type="color"] {
+    width: 60px;
+    height: 30px;
+    border: 2px solid #ccc;
+    padding: 0;
+    cursor: pointer;
+}

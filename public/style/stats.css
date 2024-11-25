@@ -1,0 +1,89 @@
+.statistics-page {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Card Layout */
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.card-content {
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    font-size: 2.5rem;
+}
+
+.card p {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* Stats section */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.stat-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: white
+}
+
+.stat-card p {
+    font-size: 2rem;
+    color: #333;
+}
+
+/* Charts Section */
+.charts-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.chart-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.chart-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
