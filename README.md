@@ -9,7 +9,6 @@ A web application to manage and track football teams, matches, and performance d
 - **Statistics**: Display team performance, top scorers, and goals scored over time using interactive charts.
 - **Image Upload**: Upload and display team logos.
 - **Authentication**: Basic authentication to manage team data securely.
-- **Responsive Design**: The application is mobile-friendly and works on a variety of devices.
 
 ## Technologies Used
 
